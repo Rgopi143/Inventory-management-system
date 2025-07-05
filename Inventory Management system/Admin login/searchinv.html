@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <style>
+    body{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+     .tab{
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: top;
+      height: 50vh;
+      width:100%;
+      margin-top: 50px; 
+    }
+    table {
+      background-color: #f5e6e6;
+      border-collapse: collapse;
+      width: 90%; 
+     
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+      font-size: 16px;
+    }
+    th {
+      background-color: #f0c4c4;
+      text-align: center;
+    }
+    .header {
+      background-color: #ffe6b3;
+      font-size: 18px;
+      text-align: center;
+      padding: 12px;
+      font-weight: bold;
+    }
+    .search-bar input[type="text"] {
+      width: 85%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .search-bar button {
+      padding: 8px 15px;
+      background-color: #ffd280;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .search-bar button:hover {
+      background-color: #ffbf66;
+    }
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul li {
+            position: relative;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+        .navbar ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #444;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .navbar ul li .dropdown a {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        .navbar ul li .dropdown a:hover {
+            background-color: #575757;
+        }
+        .navbar ul li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="Adminhome.html">Home</a></li>
+            <li>
+                <a href="#">Items</a>
+                <div class="dropdown">
+                    <a href="Additem.html">Add items</a>
+                    <a href="viewitem.html">View items</a>
+                </div>
+            </li>
+            <li><a onclick="alert('You are already on the page')">Search</a></li>
+            <li><a href="Reports.html">Reports</a></li>
+        </ul>
+    </div>
+    <div class="tab">
+    <table>
+        <tr>
+          <td colspan="4" class="header">Search Inventory</td>
+        </tr>
+          <td  class="search-bar" colspan="3">
+            <input type="text" placeholder="Enter item name">
+            <td>
+              <button>Search</button>
+            </td>
+          </td>
+        <tr>
+          <th>Product ID</th>
+          <th>Item Name</th>
+          <th>Stock</th>
+          <th>Price</th>
+        </tr> 
+        <tr>
+          <td colspan="4" style="text-align: center; font-style: italic; color: #999;">No items available</td>
+        </tr>
+      </table></div>
+</body>
+</html>

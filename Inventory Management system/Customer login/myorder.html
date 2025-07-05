@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .order {
+      padding: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .order:last-child {
+      border-bottom: none;
+    }
+
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .order-header h2 {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .order-header span {
+      color: #999;
+    }
+
+    .order-details {
+      margin-top: 15px;
+    }
+
+    .order-details p {
+      margin: 5px 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Orders</h1><hr>
+    <div class="order">
+      <div class="order-header">
+        <h2>Order #12346</h2>
+        <span>Placed on: 2023-02-15</span>
+      </div>
+      <div class="order-details"><br>
+        <p><strong>Item:</strong> Product 1</p><br>
+        <p><strong>Quantity:</strong> 1</p><br>
+        <p><strong>Total Price:</strong> ₹1500</p><br>
+        <a href="">View order</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

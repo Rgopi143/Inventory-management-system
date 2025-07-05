@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1faf0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .upload-container {
+            background-color: #59b2e9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 50%;
+            text-align: center;
+        }
+        .upload-container h2 {
+            color: #004d00;
+            margin-bottom: 20px;
+        }
+        .upload-container input[type="file"] {
+            display: block;
+            margin: 0 auto 20px;
+            font-size: 16px;
+        }
+        .upload-btn, .back-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            margin: 10px;
+        }
+        .upload-btn {
+            background-color: #4caf50;
+        }
+        .upload-btn:hover {
+            background-color: #45a049;
+        }
+        .back-btn {
+            background-color: #004d00;
+        }
+        .back-btn:hover {
+            background-color: #003300;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Image</h2>
+        <input type="file" id="image-upload" name="image-upload">
+        <div>
+            <button class="upload-btn" type="submit">Upload</button>
+            <a href="Additem.html"><button class="back-btn" type="button">Back to Add Items</button></a>
+        </div>
+    </div>
+</body>
+</html>

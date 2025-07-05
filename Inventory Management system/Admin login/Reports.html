@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+            
+        }
+        .container {
+            width:90%;
+            height: 200px;
+            margin: 50px auto;
+            background-color: #d2f3d0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+        }
+        .header {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table th, table td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #cccccc;
+        }
+        table th {
+            background-color: #c7ebc6;
+        }
+        .btn-print {
+            padding: 8px 16px;
+            background-color: #d9f7e3;
+            border: 1px solid #a9d3b8;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right;
+        }
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul li {
+            position: relative;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+        .navbar ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #444;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .navbar ul li .dropdown a {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        .navbar ul li .dropdown a:hover {
+            background-color: #575757;
+        }
+        .navbar ul li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="Adminhome.html">Home</a></li>
+            <li>
+                <a href="#">Items</a>
+                <div class="dropdown">
+                    <a href="Additem.html">Add items</a>
+                    <a href="viewitem.html">View items</a>
+                </div>
+            </li>
+            <li><a href="searchinv.html">Search</a></li>
+            <li><a onclick="alert('You are already on the page')">Reports</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <span class="title">REPORTS</span>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Item Name</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                    <th>Profits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="5" style="text-align: center;">No Data Available</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <button class="btn-print">Print</button>
+    </div>
+</body>
+</html>

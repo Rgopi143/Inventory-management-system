@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Inventory Interface</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+        }
+        header1 {
+        background-color: #0073e6;
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    header1 h1 {
+        margin: 0;
+    }
+    
+    .search-bar {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .search-bar input {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 200px;
+    }
+    
+    .search-bar button {
+        padding: 10px 15px;
+        background-color: #005bb5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    nav {
+        background-color: #f1f1f1;
+        padding: 10px 20px;
+    }
+    
+    .categories {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+    }
+    
+    .categories li {
+        margin: 0;
+    }
+    
+    .categories a {
+        text-decoration: none;
+        color: #0073e6;
+        padding: 5px 135px;
+    }
+    
+    .categories a:hover {
+        text-decoration: underline;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .product {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .product img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .product h2 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+    
+    .product p {
+        color: #0073e6;
+        font-weight: bold;
+    }
+    
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1em;
+            position: relative;
+        }
+        nav ul li a {
+            color: rgb(213, 82, 82);
+           text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 2em;
+        }
+        .search-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2em;
+        }
+        .search-section input {
+            width: 60%;
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .filters {
+            display: flex;
+            gap: 1em;
+        }
+        .filters select {
+            padding: 0.5em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2em;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1em;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+        .product-card h3 {
+            margin: 0.5em 0;
+        }
+        .load-more {
+            display: block;
+            margin: 2em auto;
+            padding: 0.5em 2em;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">MyStore</div>
+        <nav>
+            <ul>
+                <li><a href="customerhome.html">Home</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header1>
+        <h1>Inventory Management</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for items..." />
+            <button>Search</button>
+        </div>
+    </header1>
+    <main>
+    <div class="container">
+    <h1>Electronics</h1>
+    <div class="product-list">
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 1">
+            <h2>product name</h2>
+            <p class="product-price">$199.99</p>
+            <a href="#" class=" view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 2">
+            <h2>Product name</h2>
+            <p class="product-price">$49.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 3">
+            <h2>Product name</h2>
+            <p class="product-price">$9.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 4">
+            <h2>Product name</h2>
+            <p class="product-price">$299.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+          <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 5">
+            <h2>Product name</h2>
+            <p class="product-price">$199.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 6">
+            <h2>Product name</h2>
+            <p class="product-price">$49.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 7">
+            <h2>Product name</h2>
+            <p class="product-price">$9.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 8">
+            <h2>Product name</h2>
+            <p class="product-price">$299.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 9">
+            <h2>Product name</h2>
+            <p class="product-price">$299.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 10">
+            <h2>Product name</h2>
+            <p class="product-price">$299.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 11">
+            <h2>Product name</h2>
+            <p class="product-price">$299.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/200" alt="Product 12">
+            <h2>Product name</h2>
+            <p class="product-price">$299.99</p>
+            <a href="#" class="view">view</a>
+        </div>
+</div>
+</body>
+</html>

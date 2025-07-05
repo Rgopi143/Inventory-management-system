@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url();
+        
+            background-size:cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.9); 
+            color: white;
+            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 2em;
+        }
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 1em;
+            position: relative;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        nav ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #444;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        nav ul li:hover .dropdown {
+            display:block;
+        }
+        nav ul li .dropdown a {
+            display: block;
+            padding: 15px 15px;
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        nav ul li .dropdown a:hover {
+            background-color: #575757;
+        }
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">MyStore</div>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="alert('You are already on the home page!')">Home</a></li>
+            <li>
+                <a href="#">Items</a>
+                <div class="dropdown">
+                    <a href="Additem.html">Add items</a>
+                    <a href="viewitem.html">View items</a>
+                </div>
+            </li>
+            <li><a href="searchinv.html">Search</a></li>
+            <li><a href="Reports.html">Reports</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="footer">
+    © 2024 Admin Dashboard. All rights reserved.
+</div>
+</body>
+</html>

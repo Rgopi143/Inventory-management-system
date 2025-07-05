@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+      width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table thead {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    table thead th {
+      padding: 12px;
+      text-align: left;
+    }
+
+    table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    table td,
+    table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    .action-btn {
+      margin: 0 5px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .edit-btn {
+      background: #ffc107;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background: #e0a800;
+    }
+
+    .delete-btn {
+      background: #f44336;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background: #e53935;
+    }
+
+    .save-btn {
+      background: #4caf50;
+      color: white;
+      display: none;
+    }
+
+    .save-btn:hover {
+      background: #45a049;
+    }
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+        .navbar ul li {
+            position: relative;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .navbar ul li a:hover {
+            background-color: #575757;
+        }
+        .navbar ul li .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: #444;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        .navbar ul li .dropdown a {
+            padding: 10px 15px;
+            white-space: nowrap;
+        }
+        .navbar ul li .dropdown a:hover {
+            background-color: #575757;
+        }
+        .navbar ul li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <ul>
+            <li><a href="Adminhome.html">Home</a></li>
+            <li>
+                <a href="#">Items</a>
+                <div class="dropdown">
+                    <a href="Additem.html">Add items</a>
+                    <a onclick="alert('You are already on the page!')">View items</a>
+                </div>
+            </li>
+            <li><a href="searchinv.html">Search</a></li>
+            <li><a href="Reports.html">Reports</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Inventory Management</h1>
+    
+        <table>
+          <thead>
+            <tr>
+              <th>Item Name</th>
+              <th>Product ID</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="inventoryTable">
+            <tr>
+              <td contenteditable="false">Apple</td>
+              <td contenteditable="false">101</td>
+              <td contenteditable="false">50</td>
+              <td contenteditable="false">$1.00</td>
+              <td>
+                <button class="action-btn edit-btn" onclick="editItem(this)">Edit</button>
+                <button class="action-btn save-btn" onclick="saveItem(this)">Save</button>
+                <button class="action-btn delete-btn" onclick="deleteItem(this)">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td contenteditable="false">Orange</td>
+              <td contenteditable="false">102</td>
+              <td contenteditable="false">75</td>
+              <td contenteditable="false">$0.80</td>
+              <td>
+                <button class="action-btn edit-btn" onclick="editItem(this)">Edit</button>
+                <button class="action-btn save-btn" onclick="saveItem(this)">Save</button>
+                <button class="action-btn delete-btn" onclick="deleteItem(this)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+</body>
+</html>
